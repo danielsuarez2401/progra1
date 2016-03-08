@@ -1,0 +1,11 @@
+Proceso salariop 
+	definir hora,precio, salario Como Real;
+	Escribir "ingrese la hora: ";
+	leer hora;
+	escribir "ingrese el precio: ";
+	leer precio;
+	salario <- hora*precio;
+
+	salario <- 0.87*salario
+	Escribir salario ;
+FinProceso
