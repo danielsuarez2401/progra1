@@ -1,0 +1,60 @@
+// menu3.cpp : Defines the entry point for the console application.
+// Nomber: Daniel Suarez Añez
+// Fecha: 29/03/16
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	// declaracion de variables
+   int a, b, r, opcion; // variables enteras
+   float radio,area,base,altura;
+   do { // desde donde se quiere repetir
+	   // opciones de menu 
+
+     cout << endl;    
+	 cout << "1.- Area del triangulo" << endl;
+     cout << "2.- Area del circulo" << endl;
+     cout << "Elige una opción: " ;
+     cin >> opcion;
+	 // switch condicional multiple equivale a utilizar varios if 
+     switch (opcion) {
+	    case 1: 
+			{
+			 float area,base,altura; 
+  
+			 cout<<"Ingrese base: ";
+			 cin>>base;
+			 cout<<"Ingrese altura: ";
+			 cin>>altura;
+
+			 area=(base*altura)/2;
+
+			 cout<<"El area es: "<<area;
+
+			
+			}
+		case 2:
+			{
+				cout<<"ingrese radio:";
+			 cin>>radio;
+			 area=radio*radio*3.141516;
+			 cout<<"el area es"<<area;
+			
+			}
+	   
+		case 0: cout << "Salir";break;
+			// default es para ninguna de las anteriores
+	    default: cout << "Opcion invalida" << endl;
+     }
+     cout << "El resultado es " << r << endl;
+	 } while (opcion != 0);
+   
+   // fin del ciclo repetitivo
+
+     getch();
+}
