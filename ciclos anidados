@@ -1,0 +1,41 @@
+// ciclosanidados.h
+
+#include "Stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void main()
+{ 
+	int aux,codigo,numprestame,i;
+	float montoprestamo,montoe,montototal;
+	string nombre;
+	montototal=0;
+
+	cout<<"ingrese el codigo del empleado: (se termina con -999) ";
+	cin >> codigo;
+	while(codigo != -999)
+	{
+		aux=codigo;
+		montoe=0;
+		while(aux == codigo)
+		{
+			cout<<"ingrese el numero del empleado";
+			cin>> nombre;
+			cout<<"ingrese el numero de prestamo";
+			cin>> numprestamo;
+			cout<<"ingrese el monto del prestamo";
+			cin>> montoprestamo;
+			montoe=montoe+montoprestamo;
+
+			cout<<"ingrese el codigo del empleado";
+			cin>> codigo;
+		}
+		cout<< "empleado: "<< aux << "monto de empleado: "<<montoe << endl;
+		montototal=montototal+montoe;
+	}
+	cout<<"el monto prestado a los empleados es: " <<montototal << endl;
+	getch();
+}
